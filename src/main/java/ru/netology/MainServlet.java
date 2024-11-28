@@ -6,15 +6,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// класс сервлета, который будет использовать spring контекст для внедрения зависимостей
 public class MainServlet extends HttpServlet {
     // контроллер, который будет управлять запросами и делегировать их в сервис
     private PostController controller;
 
     @Override
-    // инициализация сервлета: создаем репозиторий, сервис и контроллер
     public void init() {
-        // создаем контейнер spring и подключаем к нему AppConfig
-        final var context = new AnnotationConfigApplicationContext(AppConfig.class);
+        // создаем контейнер spring и подключаем к нему AppConfigJava
+        final var context = new AnnotationConfigApplicationContext(JavaConfig.class);
         // получаем бин контроллера
         controller = context.getBean(PostController.class);
     }
