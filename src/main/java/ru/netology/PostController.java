@@ -1,11 +1,14 @@
 package ru.netology;
 
 import com.google.gson.Gson; // библиотека для работы с json.
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Reader;
 
+@Controller
+// класс принимающий запрос
 public class PostController {
   public static final String APPLICATION_JSON = "application/json"; // тип контента, который будет использоваться.
   private final PostService service; // сервис для работы с бизнес-логикой.

@@ -13,8 +13,8 @@ public class MainServlet extends HttpServlet {
     @Override
     // инициализация сервлета: создаем репозиторий, сервис и контроллер
     public void init() {
-        // создаем контейнер spring и подключаем к нему AppConfig
-        final var context = new AnnotationConfigApplicationContext(AppConfig.class);
+        // создаем контейнер spring и подключаем к нему AnnotationConfig
+        final var context = new AnnotationConfigApplicationContext(AnnotationConfig.class);
         // получаем бин контроллера
         controller = context.getBean(PostController.class);
     }

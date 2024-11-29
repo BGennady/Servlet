@@ -1,11 +1,14 @@
 package ru.netology;
 
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-// репозиторий для работы с данными. сейчас это заглушка.
+@Repository
+// класс для хранения данных
 public class PostRepository {
   // метод для получения всех постов (пока возвращаем пустой список).
   public List<Post> all() {

@@ -1,8 +1,12 @@
 package ru.netology;
 
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
+// класс для обработки запросов
 public class PostService {
   private final PostRepository repository; // репозиторий для работы с данными.
 
